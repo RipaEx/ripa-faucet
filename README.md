@@ -62,8 +62,8 @@ This project includes a reference UI that's served automatically in the `fronten
 ## Authors
 
 * **Eugene Li** - [eugeneli](https://github.com/eugeneli)
-* **[gobled](https://github.com/gobled)
-See also the list of [contributors](https://github.com/eugeneli/Ark-Faucet/graphs/contributors) who participated in this project.
+* [gobled](https://github.com/gobled)
+* See also the list of [contributors](https://github.com/eugeneli/Ark-Faucet/graphs/contributors) who participated in this project.
 
 ## License
 
