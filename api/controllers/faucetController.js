@@ -1,7 +1,7 @@
 "use strict";
 const repo = require("../repos/faucetRepo");
 const logRepo = require("../repos/logRepo");
-const arkApi = require("ark-api");
+const arkApi = require("ripa-api");
 const moment = require("moment");
 const util = require("../util");
 
@@ -13,7 +13,7 @@ const createLog = (IP, address, amount, rollTime) => {
         rollTime: rollTime
     };
 
-    console.log(`[${rollTime}] ${address} (${IP}) +${PAY_PER_CLICK} ARK`);
+    console.log(`[${rollTime}] ${address} (${IP}) +${PAY_PER_CLICK} RIPA`);
     return log;
 };
 
@@ -25,7 +25,7 @@ const timeDiff = (now, lastRollTime, cooldown) => {
 exports.useFaucet = (req, res) => {
     const address = req.body.address;
     if(!util.isAddress(address))
-        return util.reject(res, "400", "Invalid Ark address");
+        return util.reject(res, "400", "Invalid RIPA address");
 
     recaptcha.verify(req, async (err, data) => {
         if(err)

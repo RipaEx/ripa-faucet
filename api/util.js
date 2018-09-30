@@ -1,9 +1,9 @@
 "use strict";
 const BigNumber = require("bignumber.js");
 const fs = require("fs");
-const arkApi = require("ark-api");
+const arkApi = require("ripa-api");
 
-const addrRegex = /^A[a-z0-9A-Z]{33}$/;
+const addrRegex = /^P[a-z0-9A-Z]{33}$/;
 
 exports.getFaucetAccountInfo = () => {
     return new Promise((resolve, reject) => {

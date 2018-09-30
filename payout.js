@@ -1,10 +1,10 @@
 const repo = require("./api/repos/faucetRepo");
-const arkApi = require("ark-api");
+const arkApi = require("ripa-api");
 const moment = require("moment");
 const BigNumber = require("bignumber.js");
 const scheduler = require("node-schedule");
 const util = require("./api/util");
-
+arkApi.init("ripa");
 const doPayout = async (threshold, fee, passphrase, secondPassphrase) => {
     util.log("==Payout Begin==");
     util.log("DateTime: " + moment().toISOString());

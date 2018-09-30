@@ -1,6 +1,6 @@
 const fs = require("fs");
-const arkApi = require("ark-api");
-const ark = require("arkjs");
+const arkApi = require("ripa-api");
+const ark = require("ripajs");
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser")
@@ -48,7 +48,7 @@ const pool = mysql.createPool({
     host: "localhost",
     user: DB_USERNAME,
     password: DB_PASSWORD,
-    database: "ArkFaucet",
+    database: "ripa_faucet",
     debug:  false
 });
 
@@ -77,7 +77,7 @@ const startServer = () => {
             next();
     });
 
-    app.listen(PORT, async () => {
+    app.listen(PORT, '127.0.0.1', async () => {
         console.log(fs.readFileSync("art.txt", "utf8"));
         console.log(`Faucet server started on port ${PORT}`);
 
