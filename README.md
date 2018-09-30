@@ -1,10 +1,10 @@
-# Ark-Faucet
+# ripa-faucet
 
-This is a full front/backend implementation of a cryptocurrency faucet for Ark written in Node using the Express framework.
+This is a full front/backend implementation of a cryptocurrency faucet for Ripa written in Node using the Express framework.
 
 ## Getting Started
 
-First and foremost, you will need a MySQL server installed. Once the database server is running, create the ArkFaucet tables by running `db.sql` located inside the `DataModel` directory.
+First and foremost, you will need a MySQL server installed. Once the database server is running, create the ripa-faucet tables by running `db.sql` located inside the `DataModel` directory.
 
 Then, familiarize yourself with `config.json`
 ```
@@ -18,8 +18,8 @@ Then, familiarize yourself with `config.json`
     "txFee": 0.1,
     "log": "tx.log",
     "database": {
-        "username": "arkfaucet",
-        "password": "test"
+        "username": "root",
+        "password": "password"
     },
     "recaptcha": {
         "siteKey": "",
@@ -27,9 +27,9 @@ Then, familiarize yourself with `config.json`
     }
 }
 ```
-- `node` - The IP address of the Ark node the backend will use to query Ark's blockchain
+- `node` - The IP address of the Ripa node the backend will use to query Ripa's blockchain
 - `port` - The port the server will listen on
-- `payPerClick` - How much Ark to credit users per use of the faucet
+- `payPerClick` - How much Ripa (XPX) to credit users per use of the faucet
 - `cooldown` - How long users have to wait before using the faucet again (in seconds)
 - `paySchedule` - When the faucet automatically pays out, in cron format
 - `payMinimum` - The minimum balance users must accrue before they are paid out
@@ -44,7 +44,7 @@ Then, familiarize yourself with `config.json`
 ### Installation and Usage
 First, remember to prepare your MySQL database as mentioned above and insert your credentials and other settings in ```config.json```
 1) Clone this repository
-2) ```cd Ark-Faucet```
+2) ```cd ripa-faucet```
 3) ```npm install```
 
 #### Command line usage:
@@ -58,16 +58,11 @@ Note: You will need to run as root if you want the web server to listen on port 
 
 This project includes a reference UI that's served automatically in the `frontend` directory. You can test it out by going to `http://localhost` or `http://localhost:PORT`
 
-![alt text](https://i.imgur.com/BW5q73T.jpg)
-
-![alt text](https://i.imgur.com/ZlneqUW.jpg)
-
-
 
 ## Authors
 
 * **Eugene Li** - [eugeneli](https://github.com/eugeneli)
-
+* **[gobled](https://github.com/gobled)
 See also the list of [contributors](https://github.com/eugeneli/Ark-Faucet/graphs/contributors) who participated in this project.
 
 ## License
